@@ -1,0 +1,20 @@
+# Chengmeng 记忆授权模块。安装方式：
+#   dsh plugin --profile <profile> add ./plugins/memory-consent
+# `name` 必须等于 package.json 的 name。`config` 里的字段由 index.js 的 apply(ctx, config) 读取并严格校验：
+# 未知字段直接报错，缺省值写在代码里（见 src/config.js）。
+#
+# 数据目录默认是 <DSH_HOME>/chengmeng/memory（DSH_HOME 取环境变量，默认 ~/.dsh），
+# 与任何会话工作目录无关。用户在界面里改的 enabled / normalMode 存在数据目录的 settings.json 里，不在这里。
+- insert:
+    - id: chengmeng-memory-consent
+      name: '@chengmeng/dsh-memory-consent'
+      config:
+        dataDir: ''              # 空 = <DSH_HOME>/chengmeng/memory
+        backend: keyword         # keyword | qwen-hybrid | memsearch | hybrid
+        memsearch:
+          command: ''            # 空 = 不使用 memsearch；填项目内虚拟环境里的可执行文件路径
+          provider: onnx
+          milvusUri: ''
+          timeoutMs: 8000
+        pendingTtlHours: 24
+        maxContentChars: 280

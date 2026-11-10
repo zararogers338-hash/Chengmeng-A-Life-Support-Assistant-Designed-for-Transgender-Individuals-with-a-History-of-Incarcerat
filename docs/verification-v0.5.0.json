@@ -1,0 +1,19 @@
+{
+  "freshDefaultInstallation": "passed",
+  "personalDataIncluded": false,
+  "installedLauncher": "passed",
+  "releasePrivacyAudit": "passed",
+  "initialAccountState": "signed out",
+  "installedModules": 6,
+  "firstInstallInChineseAndSpacePath": "passed",
+  "cpuEmbedding": {
+    "device": "cpu",
+    "realInference": "passed",
+    "dimensions": 1024
+  },
+  "version": "0.5.0",
+  "pluginTestsPassed": 290,
+  "repeatLaunchSameNativeProcess": "passed",
+  "platform": "Windows x64",
+  "cleanSourceTestsPassed": 290
+}

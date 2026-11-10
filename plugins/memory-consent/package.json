@@ -1,0 +1,39 @@
+{
+  "name": "@chengmeng/dsh-memory-consent",
+  "version": "0.4.1",
+  "private": true,
+  "description": "Chengmeng 自动记忆：完整聊天明文归档、自动整理、CPU Qwen 混合检索与时间分页，无敏感词分类或检索过滤。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "src/",
+    "client/",
+    "python/",
+    "scripts/",
+    "lib/client.js",
+    "skills/",
+    "cordis.patch.yml"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-0 <0.2.3-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "MIT"
+}

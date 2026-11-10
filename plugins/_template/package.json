@@ -1,0 +1,26 @@
+{
+  "name": "@chengmeng/dsh-template",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Chengmeng 模块骨架：纯对象注册工具、带认证的 HTTP 路由、可测试的 apply。复制后改名使用。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-0 <0.2.3-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

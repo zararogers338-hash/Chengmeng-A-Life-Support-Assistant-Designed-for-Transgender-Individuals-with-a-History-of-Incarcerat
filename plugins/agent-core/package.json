@@ -1,0 +1,42 @@
+{
+  "name": "@chengmeng/dsh-agent-core",
+  "version": "0.2.1",
+  "private": true,
+  "description": "Chengmeng 原生 Persona 与 Agent 预设，附最小工具权限和统一显示名称。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./policy": "./policy.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "policy.js",
+    "src/",
+    "config/",
+    "persona/",
+    "scripts/",
+    "lib/client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "dsh": ">=0.2.2-0 <0.2.3-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "license": "MIT"
+}

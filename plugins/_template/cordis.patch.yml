@@ -1,0 +1,7 @@
+# 骨架：把本插件加入 Profile 的插件列表。
+# 安装：dsh plugin --profile <name> add ./plugins/<目录名>
+# `name` 必须等于 package.json 的 name。`config` 里的字段由 index.js 的 apply(ctx, config) 读取并严格校验。
+- insert:
+    - id: chengmeng-template
+      name: '@chengmeng/dsh-template'
+      config: {}

@@ -1,0 +1,54 @@
+# 依赖与构建产物
+node_modules/
+plugins/*/lib/
+
+# 隔离的 DSH 开发环境（含会话、设置，可能含 API Key）
+.dsh-dev/
+
+# 长期记忆与索引：永远不要提交
+.memsearch/
+.chengmeng/
+**/memory-pending/
+**/chengmeng/memory/
+
+# 用户自己的壁纸，只在本机使用，不进入仓库或发布包
+assets/wallpapers/local/*
+!assets/wallpapers/local/.gitkeep
+
+# 环境与密钥
+.env
+.env.*
+*.key
+*.pem
+
+# 系统文件
+Thumbs.db
+.DS_Store
+
+# 本地界面验收图可能包含账号显示名，不进入公开仓库
+docs/verification/*.jpg
+plugins/agent-core/*.tgz
+plugins/memory-consent/*.tgz
+
+# Local embedding runtime and pinned model weights
+.runtime/
+**/__pycache__/
+
+# Release archives and local plaintext backups
+dist/
+.backups/
+
+# Desktop installer staging and build caches
+.desktop-build/
+
+# Generated release manifests and local artifacts
+source-manifest.json
+*.exe
+*.zip
+*.log
+*.pyc
+.credentials.yaml
+**/.credentials.yaml
+.anonymous-user-id
+desktop-ui/
+installation.json

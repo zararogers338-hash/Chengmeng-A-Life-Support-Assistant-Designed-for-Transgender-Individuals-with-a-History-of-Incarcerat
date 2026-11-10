@@ -1,0 +1,5 @@
+# Chengmeng Pastel 外观：把客户端插件加入 Web UI 的插件列表。
+# 安装方式：dsh plugin --profile <name> add ./plugins/pastel-theme
+- insert:
+    - id: chengmeng-pastel-theme
+      name: '@chengmeng/dsh-pastel-theme'

@@ -1,0 +1,4 @@
+- insert:
+    - id: chengmeng-support-skills
+      name: '@chengmeng/dsh-support-skills'
+      config: {}

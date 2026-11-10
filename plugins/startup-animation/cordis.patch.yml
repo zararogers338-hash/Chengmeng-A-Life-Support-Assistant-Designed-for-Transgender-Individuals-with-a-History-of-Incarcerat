@@ -1,0 +1,5 @@
+# Chengmeng 启动动画：把客户端插件加入 Web UI 的插件列表。
+# 安装：dsh plugin --profile <name> add ./plugins/startup-animation
+- insert:
+    - id: chengmeng-startup-animation
+      name: '@chengmeng/dsh-startup-animation'
